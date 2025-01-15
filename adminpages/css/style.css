@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+/* admin index styles*/
+.container_login{
+    height: 100vh;
+    width: 100vw;
+    background: url(../image/background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    background-color: rgba(255, 255, 255, 0.459);
+    height: 60%;
+    width: 35%;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.adminUserName,.adminPwd{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.adminPwd{
+    position: relative;
+}
+#adminUserName,#adminPwd{
+    height: 28px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+#show,#hide,#hideicon{
+    display: none;
+}
+.icon{
+    position: absolute;
+    top: 20%;
+    left: 92%;
+}
+button{
+    width: 25%;
+    height: 23px;
+    background-color: rgb(0, 68, 255);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    transition: 1s ease-in;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+/* admin registration style */
+.container_register{
+    background: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register{
+    background-color: rgba(255, 255, 255, 0.459);
+    font-size: 0.9em;
+    height: 60%;
+    width: 35%;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+/* reg div */
+.username,.email,.password,.cpassword,.job{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 5px;
+}
+.password,.cpassword{
+    position: relative;
+}
+/* reg input */
+#username,#email,#password,#cpassword,#job{
+    height: 28px;
+    padding-left:10px ;
+    border-radius: 8px;
+    border: none;
+}
+#show1,#hide1,#show2,#hide2,#hideicon1,#hideicon2{
+    display: none;
+}
+.icon1,.icon2{
+    position: absolute;
+    left: 90%;
+    top: 15%;
+}
+.footer_reg{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.footer_reg button{
+    width: 25%;
+    height: 23px;
+    background-color: rgb(0, 153, 255);
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.993);
+    font-weight: bold;
+}
+.footer_reg button:hover{
+    background-color: black;
+    transition: 0.5s ease-in-out;
+}
+.footer_reg p a:hover{
+    color: red;
+    transition: 0.3s ease-in;
+}

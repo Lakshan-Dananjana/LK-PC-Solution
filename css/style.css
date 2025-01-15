@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+/* login page styles */
+.container_login{
+    background: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    background-color: rgba(255, 255, 255, 0.459);
+    height: 60%;
+    width: 35%;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.user,.pwd{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 5px;
+    font-size: 0.9em;
+}
+#user1,#pwd1{
+    height: 28px;
+    padding-left:10px ;
+    border-radius: 8px;
+    border: none;
+}
+#show,#hide,#hideicon{
+    display: none;
+}
+.pwd{
+    position: relative;
+}
+.icon{
+    position: absolute;
+    left: 91%;
+    top: 16%;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.footer button{
+    width: 25%;
+    height: 23px;
+    background-color: rgb(0, 68, 255);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    transition: 1s ease-in;
+}
+.footer button:hover{
+    background-color: black;
+    color: white;
+}
+.footer p a{
+    text-decoration: none;
+}
+.footer p a:hover{
+    color: red;
+    transition: 0.5s ease-out;
+}
+
+/* register page styles */
+
+.container_register{
+    background: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register{
+    background-color: rgba(255, 255, 255, 0.459);
+    font-size: 0.9em;
+    height: 60%;
+    width: 35%;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+/* reg div */
+.username,.email,.password,.cpassword{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 5px;
+}
+.password,.cpassword{
+    position: relative;
+}
+/* reg input */
+#username,#email,#password,#cpassword{
+    height: 28px;
+    padding-left:10px ;
+    border-radius: 8px;
+    border: none;
+}
+#show1,#hide1,#show2,#hide2,#hideicon1,#hideicon2{
+    display: none;
+}
+.icon1,.icon2{
+    position: absolute;
+    left: 90%;
+    top: 15%;
+}
+.footer_reg{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.footer_reg button{
+    width: 25%;
+    height: 23px;
+    background-color: rgb(0, 153, 255);
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.993);
+    font-weight: bold;
+}
+.footer_reg button:hover{
+    background-color: black;
+    transition: 0.5s ease-in-out;
+}
+.footer_reg p a:hover{
+    color: red;
+    transition: 0.3s ease-in;
+}
+
+    /* varification page styles */
+.container_varify{
+    background: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.varify{
+    background-color: rgba(255, 255, 255, 0.459);
+    font-size: 0.9em;
+    height: 30%;
+    width: 35%;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.varify div{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.varify div input{
+    height: 28px;
+    padding-left:10px ;
+    border-radius: 8px;
+    border: none;
+}
+.varify button{
+    width: 25%;
+    height: 23px;
+    background-color: rgb(0, 68, 255);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s ease-in;
+}
+.varify button:hover{
+    background-color: black;
+}
+    /* Forget page styles */
+.container_forget{
+    background: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forget{
+    background-color: rgba(255, 255, 255, 0.459);
+    font-size: 0.9em;
+    height: 60%;
+    width: 35%;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.femail, .fpassword, .fcpassword{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 5px;
+    position: relative;
+}
+#femail, #fpassword, #fcpassword{
+    height: 28px;
+    padding-left:10px ;
+    border-radius: 8px;
+    border: none;
+}
+#fshow,#fhide,#fshow1,#fhide1,#fhideicon,#fhideicon1{
+    display: none;
+}
+.ficon{
+    position: absolute;
+    left: 90%;
+    top: 15%;
+}
+
+.forget button{
+    width: 40%;
+    height: 23px;
+    background-color: rgb(0, 68, 255);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s ease-in;
+}
+.forget button:hover{
+    background-color: black;
+}
+
+    /* Home Page Styles */
+
+.container_home{
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 5%;
+    background-color: rgb(238, 202, 202);
+    box-shadow: 1px 2px 3px 1px;
+    border-radius: 0 0 5px 5px ;
+}
+.navbar img{
+    height: 40px;
+}
+.nav{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.4s ease-in;
+}
+.nav a:hover{
+    color: red;
+}
+.u_details{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.u_details a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.4s ease-in;
+}
+.u_details a:hover{
+    color: red;
+}
+.homecontent{
+    display: flex;
+    height: 55vh;
+    align-items: center;
+    flex-direction: column;
+    background: url(../image/background1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    gap: 50px;
+    padding: 0 10%;
+    justify-content: center;
+}
+
+.productitem{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+    justify-content: center;
+    background-color: gainsboro;
+}
+.productitem form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 0.13em solid black;
+    padding: 10px 0px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+}
+.productitem form img{
+    width: 300px;
+}
+.productitem form .name{
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+}
+.productitem form .price{
+    font-weight: bold;
+    background-color: rgb(255, 166, 0);
+    padding: 6px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.productitem form input[type="number"]{
+    padding: 10px;
+    width: 50px;
+}
+.productitem form button{
+    background-color: rgb(0, 191, 255);
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+.productitem form button:hover{
+    background-color: rgb(153, 153, 153);
+}
+.footer_home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: black;
+    color: white;
+}
+.conatiner_cart{
+    width: 100vw;
+    padding-top: 3%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    background-color: gainsboro;
+}
+.conatiner_cart h1{
+    text-align: center;
+}
+.conatiner_cart table thead th{
+    background-color: antiquewhite;
+    height: 35px;
+    text-align: center;
+    width: 15vw;
+}
+.conatiner_cart table tbody td{
+    background-color: white;
+    text-align: center;
+    height: 50px;
+}
+.cartImage{
+    width: 130px;
+}
+.itemSize{
+    width: 50px;
+    text-align: center;
+    height: 30px;
+}
+.updatebtn{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 191, 255);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+.updatebtn:hover{
+    background-color: rgb(153, 153, 153);
+}
+.deletebtn{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(255, 46, 46);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+.deletebtn:hover{
+    background-color: rgb(153, 153, 153);
+}
+.container_product{
+    width: 100vw;
+    height: 100vh;
+
+}
+.product_item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    min-height: 80vh;
+    padding: 40px 20px;
+    justify-content: center;
+    background-color: gainsboro;
+}
+.product_item form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 0.13em solid black;
+    padding: 10px 0px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    height: 400px;
+}
+.product_item form img{
+    width: 300px;
+}
+.product_item form .name{
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+}
+.product_item form .price{
+    font-weight: bold;
+    background-color: rgb(255, 166, 0);
+    padding: 6px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.product_item form input[type="number"]{
+    padding: 10px;
+    width: 50px;
+}
+.product_item form button{
+    background-color: rgb(0, 191, 255);
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+.product_item form button:hover{
+    background-color: rgb(153, 153, 153);
+}
