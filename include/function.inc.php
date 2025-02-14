@@ -93,7 +93,10 @@ function loginUser($conn,$email,$password){
             $_SESSION['user_id'] = $row['userId'];
             $_SESSION['user_name'] = $row['userName'];
             $_SESSION['user_email'] = $row['userEmail'];
-            echo '<script>window.location.href = "home.php";</script>';
+            $_SESSION['user_jobRoll'] = $row['userJobRoll'];
+            if ($_SESSION['user_jobRoll'] == 'user'){
+                echo '<script>window.location.href = "home.php";</script>';
+            }
             exit();
         }
     }
