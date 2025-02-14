@@ -5,67 +5,6 @@
     margin: 0px;
     font-family: 'Poppins', sans-serif;
 }
-/* admin index styles*/
-.container_login{
-    height: 100vh;
-    width: 100vw;
-    background: url(../image/background.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.login{
-    background-color: rgba(255, 255, 255, 0.459);
-    height: 60%;
-    width: 35%;
-    border: 1.5px solid black;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-}
-.adminUserName,.adminPwd{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-}
-.adminPwd{
-    position: relative;
-}
-#adminUserName,#adminPwd{
-    height: 28px;
-    padding-left: 10px;
-    border-radius: 8px;
-    border: none;
-}
-
-#show,#hide,#hideicon{
-    display: none;
-}
-.icon{
-    position: absolute;
-    top: 20%;
-    left: 92%;
-}
-button{
-    width: 25%;
-    height: 23px;
-    background-color: rgb(0, 68, 255);
-    border: none;
-    border-radius: 6px;
-    color: white;
-    font-weight: bold;
-    transition: 1s ease-in;
-}
-button:hover{
-    background-color: black;
-    color: white;
-}
-
 /* admin registration style */
 .container_register{
     background: url(../image/background.jpg);

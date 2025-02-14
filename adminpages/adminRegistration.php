@@ -1,3 +1,38 @@
+<?php
+include '../include/dbh.inc.php';
+
+    if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $userJobRoll = $_POST['job'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $cpassword = $_POST['cpassword'];
+        
+
+        if($password == $cpassword){
+            //register user
+            $sql = "INSERT INTO user (userName, userEmail, 	userPwd, userJobRoll) VALUES (?,?,?,?)";
+            $stmt = mysqli_stmt_init($conn);
+            if (!mysqli_stmt_prepare($stmt, $sql)) {
+                header("Location: register.php?error=sqlerror");
+                exit();
+            } else {
+                $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
+                mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $hashedPwd, $userJobRoll);
+                mysqli_stmt_execute($stmt);
+                echo '<script>alert("Registration Successful.")</script>';
+                // Redirect after displaying the alert
+                echo '<script>window.location.href = "adminHome.php";</script>';
+                exit();
+            }
+        }
+        else{
+            echo '<script>alert("Passwords do not match")</script>';
+            exit();
+        }
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +98,7 @@
             </div>
             <div class="footer_reg">
                 <button type="submit" name="submit">Register</button>
-                <p>Already have an account <a href="index.php">Login</a></p>
+                <p>Already have an account <a href="../index.php">Login</a></p>
             </div>
         </form>
     </div>

@@ -89,13 +89,15 @@ function loginUser($conn,$email,$password){
             echo '<script>window.location.href = "index.php";</script>';
             exit();
         } elseif($hashedPwdCheck == true){
-            session_start();
             $_SESSION['user_id'] = $row['userId'];
             $_SESSION['user_name'] = $row['userName'];
             $_SESSION['user_email'] = $row['userEmail'];
             $_SESSION['user_jobRoll'] = $row['userJobRoll'];
             if ($_SESSION['user_jobRoll'] == 'user'){
                 echo '<script>window.location.href = "home.php";</script>';
+            }
+            else if ($_SESSION['user_jobRoll'] == 'Admin'){
+                echo '<script>window.location.href = "adminpages/adminHome.php";</script>';
             }
             exit();
         }
