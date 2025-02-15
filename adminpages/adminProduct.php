@@ -24,20 +24,25 @@
                 <a href="#">Logout</a>
             </div>
             <div class="content">
-                <h1>Dashboard</h1>
-                <div class="details">
-                    <div>
-                        <p class="titel">Users</p>
-                        <p class="count">85</p>
-                    </div>
-                    <div>
-                        <p class="titel">product</p>
-                        <p class="count">85</p>
-                    </div>
-                    <div>
-                        <p class="titel">Cart</p>
-                        <p class="count">85</p>
-                    </div>
+                <h1>Product</h1>
+                <button>Add Product</button>
+                <div class="productTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Product Image</th>
+                                <th>Product Name</th>
+                                <th>Product Quantity</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
