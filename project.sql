@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2024 at 09:44 AM
+-- Generation Time: Feb 21, 2025 at 03:45 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -95,6 +95,7 @@ CREATE TABLE `user` (
   `userName` varchar(100) NOT NULL,
   `userEmail` varchar(100) NOT NULL,
   `userPwd` varchar(500) NOT NULL,
+  `userJobRoll` varchar(50) NOT NULL,
   `userImage` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -102,8 +103,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`userId`, `userName`, `userEmail`, `userPwd`, `userImage`) VALUES
-(1, 'Lakshan', 'lakshandananjana253@gmail.com', '$2y$10$qPGVXzID0venf6u.0S4L.O3J64iz0T98nG1Th6eKu3bplTvpo1Mvm', NULL);
+INSERT INTO `user` (`userId`, `userName`, `userEmail`, `userPwd`, `userJobRoll`, `userImage`) VALUES
+(2, 'Lakshan', 'lakshandananjana253@gmail.com', '$2y$10$7niSpzpn77ZM8sBM8FOb1ezgqGPLNmD9rDjUYFs0kBP18IfLEA0tC', 'user', NULL),
+(3, 'lakshan', 'lakshandananjana253@admin.com', '$2y$10$UAX.Ve79CdKLLwEtWL9lHeHNQ5kwATb5rs4MvazRELOnsXbymRuJa', 'Admin', NULL);
 
 --
 -- Indexes for dumped tables
@@ -159,7 +161,7 @@ ALTER TABLE `productall`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userId` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userId` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
