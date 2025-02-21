@@ -1,3 +1,11 @@
+<?php
+    include '../include/dbh.inc.php';
+    include '../include/function.inc.php';
+    session_start();
+    if(!isset($_SESSION['user_name'])){
+        echo '<script>window.location.href = "../index.php";</script>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +20,8 @@
         <div class="header">
             <h1>LK PC Solution Admin Panel</h1>
             <div class="userInfo">
-                Login in as:
+                <p>Login in as: <?php  echo $_SESSION['user_name'];?></p>
+                <a href="../include/logout.inc.php">Logout</a>
             </div>
         </div>
         <div class="body">
