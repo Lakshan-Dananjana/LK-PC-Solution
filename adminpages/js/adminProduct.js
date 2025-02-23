@@ -12,5 +12,3 @@ viewTblBtn.addEventListener("click", function(){
     addProuctSection.style.display = "none";
     productTable.style.display = "flex";
 });
-console.log(productTable);
-console.log(addProuctSection)
