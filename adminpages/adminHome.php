@@ -5,6 +5,41 @@
     if(!isset($_SESSION['user_name'])){
         echo '<script>window.location.href = "../index.php";</script>';
     }
+    // get number of users
+    $sqlUser = "SELECT COUNT(*) as totalUsers FROM user";
+    $resultUser = mysqli_query($conn,$sqlUser);
+
+    if($resultUser){
+        $rowUser = mysqli_fetch_assoc($resultUser);
+        $totalUser = $rowUser['totalUsers'];
+    }
+    else{
+        echo "Error: ".mysqli_error($conn);
+    }
+
+    // get number of products
+    $sqlProduct = "SELECT COUNT(*) as totalProduct FROM Product";
+    $resultProduct = mysqli_query($conn,$sqlProduct);
+
+    if($resultProduct){
+        $rowProduct = mysqli_fetch_assoc($resultProduct);
+        $totalProduct = $rowProduct['totalProduct'];
+    }
+    else{
+        echo "Error: ".mysqli_error($conn);
+    }
+
+    // get number of orders
+    $sqlCart = "SELECT COUNT(*) AS totalOrders FROM cart";
+    $resultCart = mysqli_query($conn,$sqlCart);
+
+    if($resultCart){
+        $rowCart = mysqli_fetch_assoc($resultCart);
+        $totalCart = $rowCart['totalOrders'];
+    }
+    else{
+        echo "Error: ".mysqli_error($conn);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,15 +72,15 @@
                 <div class="details">
                     <div>
                         <p class="titel">Users</p>
-                        <p class="count">85</p>
+                        <p class="count"><?php echo $totalUser; ?></p>
                     </div>
                     <div>
                         <p class="titel">product</p>
-                        <p class="count">85</p>
+                        <p class="count"><?php echo $totalProduct; ?></p>
                     </div>
                     <div>
                         <p class="titel">Cart</p>
-                        <p class="count">85</p>
+                        <p class="count"><?php echo $totalCart; ?></p>
                     </div>
                 </div>
             </div>

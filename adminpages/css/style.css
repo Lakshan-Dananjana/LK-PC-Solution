@@ -134,11 +134,25 @@
     background-color: rgb(212, 212, 212);
 }
 .content{
+    width: 74%;
     padding-left: 35px;
     padding-top: 30px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 30px;
+}
+.jBtn , .jBtn2{
+    width: 150px;
+    height: 30px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.productAdd{
+    display: none;
 }
 .details{
     display: flex;

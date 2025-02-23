@@ -1,3 +1,11 @@
+<?php
+    include '../include/dbh.inc.php';
+    include '../include/function.inc.php';
+    session_start();
+    if(!isset($_SESSION['user_name'])){
+        echo '<script>window.location.href = "../index.php";</script>';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +20,8 @@
         <div class="header">
             <h1>LK PC Solution Admin Panel</h1>
             <div class="userInfo">
-                Login in as:
+                <p>Login in as: <?php  echo $_SESSION['user_name'];?></p>
+                <a href="../include/logout.inc.php">Logout</a>
             </div>
         </div>
         <div class="body">
@@ -25,7 +34,10 @@
             </div>
             <div class="content">
                 <h1>Product</h1>
-                <button>Add Product</button>
+                <div class="btnSection">
+                    <button class="jBtn" id="jBtn">Add Product</button>
+                    <button class="jBtn2" id="jBtn2">View Table</button>
+                </div>
                 <div class="productTable">
                     <table>
                         <thead>
@@ -44,8 +56,18 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="productAdd">
+                    <form action="" method="post">
+                        <input type="text" name="productName" placeholder="Product Name">
+                        <input type="Number" name="productQuantity" placeholder="Product Quantity">
+                        <input type="text" name="" placeholder="Product Price">
+                        <input type="file" name="productImage" id="productImage">
+                        <button type="submit">Add Product</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <script src="js/adminProduct.js"></script>
 </body>
 </html>
