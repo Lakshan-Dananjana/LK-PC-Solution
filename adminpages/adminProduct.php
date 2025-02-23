@@ -59,7 +59,7 @@
                 <div class="productAdd">
                     <form action="" method="post">
                         <input type="text" name="productName" placeholder="Product Name">
-                        <input type="Number" name="productQuantity" placeholder="Product Quantity">
+                        <input type="Number" name="productQuantity" min="1" placeholder="Product Quantity">
                         <input type="text" name="" placeholder="Product Price">
                         <input type="file" name="productImage" id="productImage">
                         <button type="submit">Add Product</button>

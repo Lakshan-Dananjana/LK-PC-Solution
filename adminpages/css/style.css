@@ -151,6 +151,9 @@
     color: white;
     font-weight: bold;
 }
+.jBtn2{
+    display: none;
+}
 .productAdd{
     display: none;
 }
@@ -169,4 +172,23 @@
 }
 .details div p{
     font-weight: bold;
+}
+.productAdd form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+.productAdd form input{
+    width: 350px;
+    height: 28px;
+    padding-left: 10px;
+}
+.productAdd form button{
+    width: 120px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
 }
