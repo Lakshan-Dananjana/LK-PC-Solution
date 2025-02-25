@@ -83,7 +83,6 @@
 .container_admin{
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
 }
 .header{
     height: 15%;
@@ -135,6 +134,7 @@
 }
 .content{
     width: 74%;
+    min-height: 600px;
     padding-left: 35px;
     padding-top: 30px;
     display: flex;
@@ -191,4 +191,38 @@
     color: white;
     border: none;
     border-radius: 6px;
+}
+.productTable{
+    max-height: 350px;
+    overflow: auto;
+}
+.productTable table{
+    border: 1.5px solid black;
+}
+.productTable table thead th{
+    border: 1.5px solid black;
+}
+.tableImage{
+    width: 60px;
+}
+.productTable table tbody td{
+    min-width: 100px;
+    padding: 10px 12px;
+    border: 1.5px solid black;
+    text-align: center;
+}
+.productTable table tbody td button{
+    width: 70px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.tableForm{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

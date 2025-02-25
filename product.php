@@ -14,7 +14,7 @@ if(isset($_POST['addToCart'])){
     $select_cart_sql = "SELECT * FROM cart WHERE itemName = ? AND userEmail = ?";;
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt,$select_cart_sql)){
-        header("Location: home.php?error=stmt?error?in?selectcart");
+        header("Location: product.php?error=stmt?error?in?selectcart");
         exit();
     }
     mysqli_stmt_bind_param($stmt, "ss", $product_name, $userEmail);
@@ -28,7 +28,7 @@ if(isset($_POST['addToCart'])){
         $itemAddCartSql = "INSERT INTO cart (itemImage,itemName,itemPrice,itemQuantity,userEmail) VALUES (?,?,?,?,?);";
         $stmtInsertProduct = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmtInsertProduct,$itemAddCartSql)){
-            header("Location: home.php?error=stmt?error?in?insert?cart?item");
+            header("Location: product.php?error=stmt?error?in?insert?cart?item");
             exit();
         }
         mysqli_stmt_bind_param($stmtInsertProduct,"sssis",$product_image,$product_name,$product_price,$product_quantity,$userEmail);

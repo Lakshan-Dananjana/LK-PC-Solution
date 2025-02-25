@@ -30,7 +30,7 @@
                 <a href="adminProduct.php">Product</a>
                 <a href="#">Cart</a>
                 <a href="#">Users</a>
-                <a href="#">Logout</a>
+                <a href="../include/logout.inc.php">Logout</a>
             </div>
             <div class="content">
                 <h1>Product</h1>
@@ -45,14 +45,44 @@
                                 <th>ID</th>
                                 <th>Product Image</th>
                                 <th>Product Name</th>
+                                <th>Product Price</th>
                                 <th>Product Quantity</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <?php
+                                $selectSql = "SELECT * FROM product";
+                                $result = mysqli_query($conn,$selectSql);
+                                while($row = mysqli_fetch_assoc($result)){
+                                    $productId = $row['productId'];
+                                    $productName = $row['productName'];
+                                    $productImage = $row['productImage'];
+                                    $productPrice = $row['productPrice'];
+                                    $prodcutQuantity = $row['productQuantity'];
                                 
+                            ?>
+                            <tr>
+                                <td><?php echo $productId; ?></td>
+                                <td><img src="../productItem/<?php echo $productImage; ?>" alt="" class="tableImage"></td>
+                                <td><?php echo $productName; ?></td>
+                                <td>Rs <?php echo $productPrice; ?>/-</td>
+                                <td><?php echo $prodcutQuantity; ?></td>
+                                <td>
+                                    <form action="" method="post" class="tableForm">
+                                        <input type="hidden" name="productId" value="<?php echo $productId;?>">
+                                        <input type="hidden" name="productImage" value="<?php echo $productImage;?>">
+                                        <input type="hidden" name="productName" value="<?php echo $productName;?>">
+                                        <input type="hidden" name="productPrice" value="<?php echo $productPrice;?>">
+                                        <input type="hidden" name="productQuantity" value="<?php echo $prodcutQuantity;?>">
+                                        <button type="submit">Update</button>
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </td>
                             </tr>
+                            <?php
+                                }
+                            ?>
                         </tbody>
                     </table>
                 </div>
