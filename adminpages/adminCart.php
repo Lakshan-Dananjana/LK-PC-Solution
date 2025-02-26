@@ -30,10 +30,30 @@
                 <a href="adminProduct.php">Product</a>
                 <a href="adminCart.php">Cart</a>
                 <a href="adminUser.php">Users</a>
+                <a href="adminRegistration.php">Admin Sign Up</a>
                 <a href="../include/logout.inc.php">Logout</a>
             </div>
             <div class="content">
                 <h1>Cart</h1>
+                <div class="productTable">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Item ID</th>
+                                <th>Item Image</th>
+                                <th>Item Name</th>
+                                <th>Item Price</th>
+                                <th>Item Quantity</th>
+                                <th>User Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
