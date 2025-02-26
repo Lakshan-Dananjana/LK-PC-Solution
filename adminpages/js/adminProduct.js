@@ -16,3 +16,7 @@ viewTblBtn.addEventListener("click", function(){
     addPdtBtn.style.display = "block";
     viewTblBtn.style.display = "none";
 });
+
+function saveTableData() {
+    document.getElementById("table_data").value = document.getElementById("tableToExport").outerHTML;
+}

@@ -185,6 +185,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.5s ease;
+    font-size: 0.9em;
 }
 .linkBtn:hover{
     background-color: rgb(4, 189, 189);
@@ -242,4 +243,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.downloadbtn{
+    width: 150px;
+    height: 28px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

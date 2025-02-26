@@ -73,7 +73,7 @@
                     <div>
                         <p class="titel">Users</p>
                         <p class="count"><?php echo $totalUser; ?></p>
-                        <a href="#" class="linkBtn">See More>></a>
+                        <a href="adminUser.php" class="linkBtn">See More>></a>
                     </div>
                     <div>
                         <p class="titel">Product</p>
@@ -83,7 +83,7 @@
                     <div>
                         <p class="titel">Cart</p>
                         <p class="count"><?php echo $totalCart; ?></p>
-                        <a href="#" class="linkBtn">See More>></a>
+                        <a href="adminCart.php" class="linkBtn">See More>></a>
                     </div>
                 </div>
             </div>
