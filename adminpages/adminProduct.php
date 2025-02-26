@@ -28,8 +28,8 @@
             <div class="sidebar">
                 <a href="adminHome.php">Dashboard</a>
                 <a href="adminProduct.php">Product</a>
-                <a href="#">Cart</a>
-                <a href="#">Users</a>
+                <a href="adminCart.php">Cart</a>
+                <a href="adminUser.php">Users</a>
                 <a href="../include/logout.inc.php">Logout</a>
             </div>
             <div class="content">
@@ -75,8 +75,8 @@
                                         <input type="hidden" name="productName" value="<?php echo $productName;?>">
                                         <input type="hidden" name="productPrice" value="<?php echo $productPrice;?>">
                                         <input type="hidden" name="productQuantity" value="<?php echo $prodcutQuantity;?>">
-                                        <button type="submit">Update</button>
-                                        <button type="submit">Delete</button>
+                                        <button type="submit" name="update" >Update</button>
+                                        <button type="submit" name="delete" >Delete</button>
                                     </form>
                                 </td>
                             </tr>
@@ -90,9 +90,9 @@
                     <form action="" method="post">
                         <input type="text" name="productName" placeholder="Product Name">
                         <input type="Number" name="productQuantity" min="1" placeholder="Product Quantity">
-                        <input type="text" name="" placeholder="Product Price">
+                        <input type="text" name="productPrice" placeholder="Product Price">
                         <input type="file" name="productImage" id="productImage">
-                        <button type="submit">Add Product</button>
+                        <button type="submit" name="addProduct">Add Product</button>
                     </form>
                 </div>
             </div>

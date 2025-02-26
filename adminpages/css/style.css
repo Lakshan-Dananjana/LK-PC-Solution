@@ -173,6 +173,23 @@
 .details div p{
     font-weight: bold;
 }
+.linkBtn{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+.linkBtn:hover{
+    background-color: rgb(4, 189, 189);
+    color: black;
+}
 .productAdd form{
     display: flex;
     flex-direction: column;

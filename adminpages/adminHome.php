@@ -63,9 +63,9 @@
             <div class="sidebar">
                 <a href="adminHome.php">Dashboard</a>
                 <a href="adminProduct.php">Product</a>
-                <a href="#">Cart</a>
-                <a href="#">Users</a>
-                <a href="#">Logout</a>
+                <a href="adminCart.php">Cart</a>
+                <a href="adminUser.php">Users</a>
+                <a href="../include/logout.inc.php">Logout</a>
             </div>
             <div class="content">
                 <h1>Dashboard</h1>
@@ -73,14 +73,17 @@
                     <div>
                         <p class="titel">Users</p>
                         <p class="count"><?php echo $totalUser; ?></p>
+                        <a href="#" class="linkBtn">See More>></a>
                     </div>
                     <div>
-                        <p class="titel">product</p>
+                        <p class="titel">Product</p>
                         <p class="count"><?php echo $totalProduct; ?></p>
+                        <a href="adminproduct.php" class="linkBtn">See More>></a>
                     </div>
                     <div>
                         <p class="titel">Cart</p>
                         <p class="count"><?php echo $totalCart; ?></p>
+                        <a href="#" class="linkBtn">See More>></a>
                     </div>
                 </div>
             </div>
