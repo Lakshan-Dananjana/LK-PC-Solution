@@ -212,6 +212,7 @@
 }
 .productTable{
     max-height: 350px;
+    max-width: 880px;
     overflow: auto;
 }
 .productTable table{

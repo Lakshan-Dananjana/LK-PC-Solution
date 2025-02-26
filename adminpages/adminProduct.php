@@ -20,9 +20,9 @@
         $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
     
         // Set document properties
-        $pdf->SetCreator('Your Website');
-        $pdf->SetAuthor('Your Name');
-        $pdf->SetTitle('Table PDF Export');
+        $pdf->SetCreator('LK PC Solution');
+        $pdf->SetAuthor($_SESSION['user_name']);
+        $pdf->SetTitle('Product PDF Export');
         $pdf->SetMargins(10, 10, 10);
         $pdf->AddPage();
     
@@ -114,10 +114,6 @@
                         </tbody>
                     </table>
                 </div>
-                    <form method="post" action="">
-                        <input type="hidden" name="table_data" id="table_data">
-                        <button type="submit" onclick="saveTableData()" name="pdfDownload" class="downloadbtn">Download PDF</button>
-                    </form>
                 <div class="productAdd">
                     <form action="" method="post">
                         <input type="text" name="productName" placeholder="Product Name">
@@ -127,6 +123,10 @@
                         <button type="submit" name="addProduct">Add Product</button>
                     </form>
                 </div>
+                <form method="post" action="">
+                    <input type="hidden" name="table_data" id="table_data">
+                    <button type="submit" onclick="saveTableData()" name="pdfDownload" class="downloadbtn">Download PDF</button>
+                </form>
             </div>
         </div>
     </div>
