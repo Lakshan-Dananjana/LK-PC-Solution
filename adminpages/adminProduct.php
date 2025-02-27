@@ -32,6 +32,28 @@
         // Output the PDF (Download)
         $pdf->Output('ProductDetails.pdf', 'D');
     }
+
+    if(isset($_POST['addProduct'])){
+        $productname = $_POST['productName'];
+        $productimage = $_FILES['productImage']['name'];
+        $tempname = $_FILES['productImage']['tmp_name'];
+        $folder = '../productItem/'.$productimage;
+        $productprice = $_POST['productPrice'];
+        $productquantity = $_POST['productQuantity'];
+
+        if (move_uploaded_file($tempname, $folder)) {
+            $uploadSql = "INSERT INTO product (productImage, productName, productPrice, productQuantity) VALUES ('$productimage', '$productname', '$productprice', '$productquantity')";
+            $result = mysqli_query($conn, $uploadSql);
+    
+            if ($result) {
+                echo '<script>alert("File uploaded successfully!")</script>';
+            } else {
+                echo '<script>alert("Database insert failed: ' . mysqli_error($conn) . '")</script>';
+            }
+        } else {
+            echo '<script>alert("File not uploaded!")</script>';
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +137,7 @@
                     </table>
                 </div>
                 <div class="productAdd">
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <input type="text" name="productName" placeholder="Product Name">
                         <input type="Number" name="productQuantity" min="1" placeholder="Product Quantity">
                         <input type="text" name="productPrice" placeholder="Product Price">
