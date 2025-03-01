@@ -39,7 +39,7 @@ include '../include/dbh.inc.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page  |  LK PC SOLUTION|Dambulla</title>
+    <title>Admin Register Page  |  LK PC SOLUTION|Dambulla</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="./image/LK PC Solution.png" type="image/x-icon">
 </head>
