@@ -285,8 +285,13 @@
 .navbar img{
     height: 40px;
 }
+.navLink{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
 .nav{
-    width: 40%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -301,7 +306,7 @@
     color: red;
 }
 .u_details{
-    width: 15%;
+    width: 25%;
     display: flex;
     justify-content: space-between;
 }
@@ -313,6 +318,12 @@
 }
 .u_details a:hover{
     color: red;
+}
+.iconNavbar{
+    display: none;
+}
+#show, #close, #closeIcon{
+    display: none;
 }
 .homecontent{
     display: flex;
@@ -504,4 +515,100 @@
 }
 .product_item form button:hover{
     background-color: rgb(153, 153, 153);
+}
+@media (max-width:900px) {
+    .navLink{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        justify-content: flex-start;
+        background-color: rgba(110, 110, 110, 0.651);
+        width: 100vw;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        padding-top: 30px;
+        display: none;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+        height: 60%;
+        width: 95%;
+    }
+    .u_details{
+        padding-top: 40px;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: 95%;
+        height: 40%;
+        gap: 20%;
+    }
+    .nav a, .u_details a{
+        width: 90%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        border-radius: 15px;
+        font-size: 1.1em;
+        color: white;
+        transition: 0.8s ease;
+    }
+    .nav a:hover, .u_details a:hover{
+        background-color: rgb(255, 177, 190);
+        color: white;
+    }
+    .iconNavbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 40px;
+    }
+    .login{
+        width: 45%;
+    }
+    .register{
+        width: 45%;
+    }
+    .forget{
+        width: 45%;
+    }
+    .varify{
+        width: 45%;
+    }
+}
+@media (max-width:800px) {
+    .login{
+        width: 60%;
+    }
+    .register{
+        width: 60%;
+    }
+    .forget{
+        width: 60%;
+    }
+    .varify{
+        width: 60%;
+    }
+}
+@media (max-width:580px){
+    .login{
+        width: 90%;
+    }
+    .register{
+        width: 90%;
+    }
+    .forget{
+        width: 90%;
+    }
+    .varify{
+        width: 90%;
+    }
 }
