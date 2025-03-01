@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2025 at 03:45 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Mar 01, 2025 at 05:12 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,15 @@ CREATE TABLE `cart` (
   `itemPrice` int(10) NOT NULL,
   `itemQuantity` int(10) NOT NULL,
   `userEmail` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`itemId`, `itemImage`, `itemName`, `itemPrice`, `itemQuantity`, `userEmail`) VALUES
+(19, '01.jpg', 'Brand New i3 third gen laptop', 60000, 1, 'lakshandananjana253@gmail.com'),
+(20, '11.jpg', 'MSI H110 Brand New Motherboard', 22000, 1, 'lakshandananjana253@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -48,17 +56,18 @@ CREATE TABLE `product` (
   `productName` varchar(100) NOT NULL,
   `productPrice` int(10) NOT NULL,
   `productQuantity` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`productId`, `productImage`, `productName`, `productPrice`, `productQuantity`) VALUES
-(1, '01.jpg', 'Brand New i3 third gen laptop', 60000, 100),
+(1, '01.jpg', 'Brand New i3 third gen laptop', 68000, 100),
 (2, '02.jpg', 'i5 third gen system unit with a RGB fans', 45000, 100),
 (3, '03.jpg', 'Brand new i5 fifth gen laptop', 85000, 100),
-(4, '15.jpg', 'RPM Euro games Gaming keyboard', 7500, 100);
+(4, '15.jpg', 'RPM Euro games Gaming keyboard', 7500, 100),
+(6, '11.jpg', 'MSI H110 Brand New Motherboard', 22000, 100);
 
 -- --------------------------------------------------------
 
@@ -72,7 +81,7 @@ CREATE TABLE `productall` (
   `productTitle` varchar(200) NOT NULL,
   `productPrice` int(20) NOT NULL,
   `productQuantity` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `productall`
@@ -97,7 +106,7 @@ CREATE TABLE `user` (
   `userPwd` varchar(500) NOT NULL,
   `userJobRoll` varchar(50) NOT NULL,
   `userImage` varchar(1000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
@@ -143,13 +152,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `itemId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `itemId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `productId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `productId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `productall`
