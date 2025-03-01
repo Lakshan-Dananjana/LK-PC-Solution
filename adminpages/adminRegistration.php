@@ -51,7 +51,7 @@ include '../include/dbh.inc.php';
                 <input type="text" name="name" id="username" placeholder="Name" >
             </div>
             <div class="job">   
-                <input type="text" name="job" id="job" placeholder="Working State" >
+                <input type="text" name="job" id="job" placeholder="Working State" value="Admin" readonly>
             </div>
             <div class="email">
                 <input type="text" name="email" id="email" placeholder="Email" >

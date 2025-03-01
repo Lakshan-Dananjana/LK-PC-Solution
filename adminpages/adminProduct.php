@@ -54,6 +54,31 @@
             echo '<script>alert("File not uploaded!")</script>';
         }
     }
+    if(isset($_POST['update'])){
+        $id = $_POST['productId'];
+        $image = $_POST['productImage'];
+        $name = $_POST['productName'];
+        $price = $_POST['productPrice'];
+        $quantity = $_POST['productQuantity'];
+
+        $_SESSION['id'] = $id;
+        $_SESSION['image'] = $image;
+        $_SESSION['name'] = $name;
+        $_SESSION['price'] = $price;
+        $_SESSION['quantity'] = $quantity;
+
+        header('location: updateProduct.php');
+    }
+    if(isset($_POST['delete'])){
+        $id = $_POST['productId'];
+        $deleteSql = "DELETE FROM product WHERE productId = $id";
+        $result = mysqli_query($conn, $deleteSql);
+        if ($result) {
+            echo '<script>alert("Product deleted successfully!")</script>';
+        } else {
+            echo '<script>alert("Database delete failed: '. mysqli_error($conn). '")</script>';
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
