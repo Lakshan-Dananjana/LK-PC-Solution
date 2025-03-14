@@ -46,7 +46,7 @@
             $result = mysqli_query($conn, $uploadSql);
     
             if ($result) {
-                echo '<script>alert("File uploaded successfully!")</script>';
+                echo '<script>alert("File And Data uploaded successfully!")</script>';
             } else {
                 echo '<script>alert("Database insert failed: ' . mysqli_error($conn) . '")</script>';
             }
