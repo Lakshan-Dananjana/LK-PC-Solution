@@ -1,66 +1,77 @@
-# 🖥️ LKPC Solution
+# LK-PC Solution Web Application
 
-![PHP Version](https://img.shields.io/badge/PHP-%3E%3D7.4-blue)  
-**LKPC Solution** is a modern PHP-based web application for managing online stores, complete with user authentication, product catalog, and an administrative dashboard.
+![Project Screenshot](screenshot.png)
 
----
+## Table of Contents
+1. [Description](#description)
+2. [Features](#features)
+3. [Screenshots](#screenshots)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [API Endpoints](#api-endpoints)
+7. [Contribution Guidelines](#contribution-guidelines)
+8. [License](#license)
+9. [Author](#author)
 
-## ✨ Features
+## Description
+LK-PC Solution is an advanced e-commerce platform for selling computer-related items. It offers a seamless shopping experience for users, along with robust admin controls for managing products and orders.
 
-🌟 **User Management**  
-- Simple registration and login.  
-- Password recovery via OTP email verification.
+## Features
+- User authentication (registration, login, password recovery)
+- Product listing and categorization with search functionality
+- Shopping cart and checkout system
+- Secure payment integration (e.g., PayPal, Stripe)
+- Admin dashboard for managing products and orders
+- Order tracking and notifications
+- Mobile-friendly responsive design
 
-🛒 **Product Catalog**  
-- Browse a variety of products.  
-- Add your favorite items to the cart.
+## Screenshots
+_Add relevant screenshots of the application here._
 
-🔐 **Admin Panel**  
-- Efficiently manage users and products.  
-- Gain insights with analytics.
+## Installation
 
-📂 **Database Integration**  
-- Pre-configured SQL schema for a smooth setup.
-🚀 **Setup Instructions**
-Clone the Repository
+### Prerequisites
+- PHP (>=7.4 recommended)
+- MySQL Database
+- Apache Server (XAMPP, WAMP, or LAMP recommended)
 
-- bash
-Copy code
-git clone https://github.com/yourusername/LKPCSolution.git
-Configure the Database
+### Setup Guide
+1. Clone or download this repository:
+   ```sh
+   git clone https://github.com/Lakshan-Dananjana/LK-PC-Solution.git
+   cd LK-PC-Solution
+   ```
+2. Copy the project files to your web server's root directory.
+3. Import the `project.sql` file into your MySQL database.
+4. Configure database connection settings in `config.php`.
+5. Start your server and access the application via `http://localhost/your-project-folder/`.
 
-- Import project.sql into MySQL.
-- Update include/dbh.inc.php with your database credentials.
-- Start the Application
+## Usage
+- **User:** Sign up or log in to explore the store.
+- Browse and search for products.
+- Add items to the cart and proceed to checkout.
+- Track past orders and order details.
+- Admins can manage inventory, orders, and users.
 
-- Use a local server or deploy to a live host.
-- Open the app in your browser and enjoy!
-
-
----
-
-## 📂 Project Structure
-
-```plaintext
-LKPCSolution/
-├── adminpages/        # Admin panel pages and styles
-├── css/               # Custom stylesheets for the application
-├── image/             # Application assets and images
-├── include/           # Backend scripts for database interaction and helper functions
-├── js/                # JavaScript files for client-side functionality
-├── productItem/       # Product images
-├── vender/            # External libraries and dependencies (e.g., PHPMailer)
-└── *.php              # Main application PHP files
-
+## API Endpoints
+### Product Endpoints
+```http
+GET    /api/products            # Retrieve all products
+GET /product/{id}            Get details of a single product
+POST /product                Add a new product
+PUT /product/{id}            Update product details
+DELETE /product/{id}         Remove a product
 ```
 
-🤝 **Contributing**
--   We welcome contributions! Feel free to fork this repo, submit issues, or open pull requests.
+## Contribution Guidelines
+- Fork the repository and create a new branch.
+- Follow coding standards and best practices.
+- Test your code before submitting a pull request.
+- Provide detailed commit messages.
 
-📜 **License**
--   Licensed under the MIT License. For details, check out the LICENSE file.
+## License
+This project is open-source and available under the [MIT License](LICENSE.md).
 
--   Enjoy exploring LKPC Solution! 🌟 For questions, feel free to reach out! 
-
--   Would you like to download this updated version?
+## Author
+Developed by **Lakshan Dananjana**. If you have any questions or feedback, feel free to reach out.
 
