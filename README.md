@@ -1,6 +1,6 @@
 # LK-PC Solution Web Application
 
-![Project Screenshot](screenshot.png)
+![Project Screenshot](image/LK%20PC%20Solution.png)
 
 ## Table of Contents
 1. [Description](#description)
