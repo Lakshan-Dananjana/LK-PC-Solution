@@ -26,12 +26,13 @@ LK-PC Solution is an advanced e-commerce platform for selling computer-related i
 - Mobile-friendly responsive design
 
 ## Screenshots
-(interfaces/login.png)
-(interfaces/register.png)
-(interfaces/home1.png)
-(interfaces/home2.png)
-(interfaces/cart.png)
-(interfaces/product.png)
+![Login Interface](interfaces/login.png)
+![Register Interface](interfaces/register.png)
+![Home Interface 1](interfaces/home1.png)
+![Home Interface 2](interfaces/home2.png)
+![Cart Interface](interfaces/cart.png)
+![Product Interface](interfaces/product.png)
+
 ## Installation
 
 ### Prerequisites
