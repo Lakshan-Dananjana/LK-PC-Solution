@@ -8,6 +8,7 @@
             "email": "lkpcsolution0@gmail.com"
         }
     ],
+    "license": "proprietary",
     "require": {
         "php": "^8.0"
     }
