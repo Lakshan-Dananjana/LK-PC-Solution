@@ -1,14 +1,14 @@
 {
     "name": "lakshan-dananjana/lk-pc-solution",
-    "description": "A brief description of your project",
+    "description": "no desc",
     "type": "project",
     "authors": [
         {
             "name": "Lakshan-Dananjana",
-            "email": "lakshandananjana253@gmail.com"
+            "email": "lkpcsolution0@gmail.com"
         }
     ],
     "require": {
-        "monolog/monolog": "^2.0"
+        "php": "^8.0"
     }
 }
