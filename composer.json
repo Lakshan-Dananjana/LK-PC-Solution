@@ -1,0 +1,14 @@
+{
+    "name": "lakshan-dananjana/lk-pc-solution",
+    "description": "A brief description of your project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Lakshan-Dananjana",
+            "email": "lakshandananjana253@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.0"
+    }
+}
