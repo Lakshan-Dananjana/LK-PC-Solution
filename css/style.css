@@ -417,7 +417,7 @@
     background-color: antiquewhite;
     height: 35px;
     text-align: center;
-    width: 15vw;
+    width: 12vw;
 }
 .conatiner_cart table tbody td{
     background-color: white;
@@ -425,15 +425,15 @@
     height: 50px;
 }
 .cartImage{
-    width: 130px;
+    width: 120px;
 }
 .itemSize{
-    width: 50px;
+    width: 45px;
     text-align: center;
     height: 30px;
 }
 .updatebtn{
-    width: 100px;
+    width: 90px;
     height: 30px;
     background-color: rgb(0, 191, 255);
     border: none;
@@ -514,6 +514,67 @@
     transition: 0.2s ease-in;
 }
 .product_item form button:hover{
+    background-color: rgb(153, 153, 153);
+}
+.orderPalce_conatiner{
+    height: 100vh;
+    width: 100vw;
+    background-color: gainsboro;
+}
+.order{
+    width: 100%;
+    height: 90%;
+}
+.order h1{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.orderDetails{
+    width: 100%;
+    height: 90%;
+}
+.orderDetails form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.details{
+    display: flex;
+    padding-left: 50px;
+    gap: 30px;
+    font-weight: bold;
+    align-items: center;
+}
+.details img{
+    width: 200px;
+    border-radius: 10px;
+    border: 1.5px solid black;
+}
+.details input{
+    width: 250px;
+    height: 28px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-left: 15px;
+}
+.placebtn{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+.orderbtn{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(0, 191, 255);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+.orderbtn:hover{
     background-color: rgb(153, 153, 153);
 }
 @media (max-width:900px) {

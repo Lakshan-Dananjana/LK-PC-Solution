@@ -52,6 +52,13 @@ if(isset($_POST['updatebtn'])){
     mysqli_stmt_close($stmt);
     echo '<script>alert("This product has been updated from your cart.")</script>';
 }
+if(isset($_POST['placeOrder'])){
+    $_SESSION['itemName'] = $_POST['itemName'];
+    $_SESSION['itemPrice'] = $_POST['itemPrice'];
+    $_SESSION['itemQuantity'] = $_POST['itemQuantity'];
+    $_SESSION['itemImage'] = $_POST['itemImage'];
+    header("Location: orderplace.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -64,14 +71,14 @@ if(isset($_POST['updatebtn'])){
     <link rel="shortcut icon" href="./image/LK PC Solution.png" type="image/x-icon">
 </head>
 <body>
-<div class="navbar">
+        <div class="navbar">
             <img src="./image/LK PC Solution.png" alt="">
             <div class="navLink">
                 <div class="nav">
                     <a href="home.php">Home</a>
                     <a href="product.php">Product</a>
-                    <a href="#">About Us</a>
                     <a href="cart.php">Cart</a>
+                    <a href="order.php">Orders</a>
                 </div>
                 <div class="u_details">
                     <a href="#">
@@ -110,8 +117,9 @@ if(isset($_POST['updatebtn'])){
                     <th>Product Name</th>
                     <th>Product Price</th>
                     <th>Product Quantity</th>
+                    <th>Place Order</th>
                     <th>Total Price</th>
-                    <th>Action</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -132,8 +140,17 @@ if(isset($_POST['updatebtn'])){
                     <td>
                         <form action="" method="post">
                             <input type="hidden" name="itemName" value="<?php echo $itemName;?>">
-                            <input type="number" class="itemSize" min="1" name="itemSize" id="" value="<?php echo $itemQuantity;?>">
+                            <input type="number" class="itemSize" min="1" max="5" name="itemSize" id="" value="<?php echo $itemQuantity;?>">
                             <button type="submit" name="updatebtn" class="updatebtn">Update</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" name="itemName" value="<?php echo $itemName;?>">
+                            <input type="hidden" name="itemPrice" value="<?php echo $itemPrice;?>">
+                            <input type="hidden" name="itemQuantity" value="<?php echo $itemQuantity;?>">
+                            <input type="hidden" name="itemImage" value="<?php echo $itemImage;?>">
+                            <button type="submit" class="updatebtn" name="placeOrder">Place Order</button>
                         </form>
                     </td>
                     <td>Rs<?php echo $totalPrice;?>/-</td>
@@ -142,12 +159,13 @@ if(isset($_POST['updatebtn'])){
                             <button type="submit" name="deletebtn" class="deletebtn">Delete</button>
                         </form>
                     </td>
+                    
                 </tr>
             <?php
                 };
             ?>
             <tr>
-                <td colspan="4">
+                <td colspan="5">
                 </td>
                 <td>Total Price: Rs.
                     <?php

@@ -57,8 +57,8 @@
                 <div class="nav">
                     <a href="home.php">Home</a>
                     <a href="product.php">Product</a>
-                    <a href="#">About Us</a>
                     <a href="cart.php">Cart</a>
+                    <a href="order.php">Orders</a>
                 </div>
                 <div class="u_details">
                     <a href="#">
@@ -112,7 +112,7 @@
                 <img src="productItem/<?php echo $productImage ?>" alt="product">
                 <p class="name"><?php echo $productName?></p>
                 <p class="price">Rs <?php echo $productPrice?>/-</p>
-                <input type="number" name="productQuantity" id="" min="1" value="1">
+                <input type="number" name="productQuantity" id="" min="1" max="5" value="1">
                 <input type="hidden" name="productImage" value="<?php echo $productImage ?>">
                 <input type="hidden" name="productName" value="<?php echo $productName?>">
                 <input type="hidden" name="productPrice" value="<?php echo $productPrice ?>">
