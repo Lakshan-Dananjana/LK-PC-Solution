@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2025 at 05:12 PM
+-- Generation Time: May 02, 2025 at 06:04 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -36,13 +36,25 @@ CREATE TABLE `cart` (
   `userEmail` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `cart`
+-- Table structure for table `orders`
 --
 
-INSERT INTO `cart` (`itemId`, `itemImage`, `itemName`, `itemPrice`, `itemQuantity`, `userEmail`) VALUES
-(19, '01.jpg', 'Brand New i3 third gen laptop', 60000, 1, 'lakshandananjana253@gmail.com'),
-(20, '11.jpg', 'MSI H110 Brand New Motherboard', 22000, 1, 'lakshandananjana253@gmail.com');
+CREATE TABLE `orders` (
+  `id` int(255) NOT NULL,
+  `UserName` varchar(255) NOT NULL,
+  `userEmail` varchar(255) NOT NULL,
+  `userPhoneNumber` int(255) NOT NULL,
+  `orderStatus` varchar(255) NOT NULL,
+  `deliveryStatus` varchar(255) NOT NULL,
+  `orderImage` varchar(255) NOT NULL,
+  `orderName` varchar(255) NOT NULL,
+  `orderPrice` int(255) NOT NULL,
+  `orderQuantity` int(255) NOT NULL,
+  `totalPrice` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -64,7 +76,7 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`productId`, `productImage`, `productName`, `productPrice`, `productQuantity`) VALUES
 (1, '01.jpg', 'Brand New i3 third gen laptop', 68000, 100),
-(2, '02.jpg', 'i5 third gen system unit with a RGB fans', 45000, 100),
+(2, '02.jpg', 'i5 third gen system unit with a RGB fans', 45000, 99),
 (3, '03.jpg', 'Brand new i5 fifth gen laptop', 85000, 100),
 (4, '15.jpg', 'RPM Euro games Gaming keyboard', 7500, 100),
 (6, '11.jpg', 'MSI H110 Brand New Motherboard', 22000, 100);
@@ -113,7 +125,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userId`, `userName`, `userEmail`, `userPwd`, `userJobRoll`, `userImage`) VALUES
-(2, 'Lakshan', 'lakshandananjana253@gmail.com', '$2y$10$7niSpzpn77ZM8sBM8FOb1ezgqGPLNmD9rDjUYFs0kBP18IfLEA0tC', 'user', NULL),
+(2, 'Lakshan', 'lakshandananjana253@gmail.com', '$2y$10$9O.hRP6TV1DaW.h5s4ktB.0Zw8nzKPTjlHqs7Mh0DH5HvMKuxpknK', 'user', NULL),
 (3, 'lakshan', 'lakshandananjana253@admin.com', '$2y$10$UAX.Ve79CdKLLwEtWL9lHeHNQ5kwATb5rs4MvazRELOnsXbymRuJa', 'Admin', NULL);
 
 --
@@ -125,6 +137,12 @@ INSERT INTO `user` (`userId`, `userName`, `userEmail`, `userPwd`, `userJobRoll`,
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`itemId`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product`
@@ -152,7 +170,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `itemId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `itemId` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `product`

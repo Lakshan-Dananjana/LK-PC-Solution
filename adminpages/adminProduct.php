@@ -104,6 +104,7 @@
                 <a href="adminProduct.php">Product</a>
                 <a href="adminCart.php">Cart</a>
                 <a href="adminUser.php">Users</a>
+                <a href="adminOrder.php">Orders</a>
                 <a href="adminRegistration.php">Admin Sign Up</a>
                 <a href="../include/logout.inc.php">Logout</a>
             </div>
